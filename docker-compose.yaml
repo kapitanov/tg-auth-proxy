@@ -1,0 +1,10 @@
+version: '2.4'
+services:
+    tg-oauth-proxy:
+        build: .
+        image: tg-oauth-proxy:latest
+        container_name: tg-oauth-proxy
+        restart: always
+        ports:
+            - 80:80
+        env_file: .env
